@@ -10,6 +10,6 @@ Use `npm run start` to start up local development server.
 - Supports basic formulas (+, -, *, /)
 
 ## Ideas
-[ ] Handle cell references (e.g. A1, B2)
-[ ] Persist data into local storage
-[ ] Support multiple sheet
+- [ ] Handle cell references (e.g. A1, B2)
+- [ ] Persist data into local storage
+- [ ] Support multiple sheet
