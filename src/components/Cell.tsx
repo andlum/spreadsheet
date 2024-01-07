@@ -114,7 +114,7 @@ const Cell = ({
           />
         </>
       ) : (
-        value
+        <span className="cell-value">{value}</span>
       )}
     </div>
   );
