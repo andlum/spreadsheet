@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+:root {
+  --cell-border: 1px solid lightgrey;
+  --cell-highlight-color: royalblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Cell {
+  position: relative;
+  border-style: solid;
+  border-color: black;
+  border-top: 0;
+  border-left: 0;
+  border-right: var(--cell-border);
+  border-bottom: var(--cell-border);
+  border-radius: 0;
+  height: 26px;
+  width: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cell-input {
+  padding: .25rem;
+  border: 0;
+  width: 100%;
+  height: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.--top {
+  border-top: var(--cell-border);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.--left {
+  border-left: var(--cell-border);
+}
+
+.--dragged {
+  border: 1px dashed lightgrey;
+}
+
+.--focused,
+.Cell:focus {
+  border: 1px solid var(--cell-highlight-color);
+}
+
+.drag-affordance {
+  position: absolute;
+  z-index: 2;
+  bottom: -5px;
+  right: -5px;
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: var(--cell-highlight-color);
+}
+
+.--drag {
+  border-style: dashed;
 }
